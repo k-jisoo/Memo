@@ -14,8 +14,8 @@ public class MemoController {
 
     final MemoService memoService;
 
-    public MemoController(JdbcTemplate jdbcTemplate) {
-        memoService = new MemoService(jdbcTemplate);
+    public MemoController(MemoService memoService) {
+        this.memoService = memoService;
     }
 
     @PostMapping("/memos")
